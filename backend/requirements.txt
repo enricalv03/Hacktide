@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+
+# Forecast XGB (pip install -r requirements-forecast.txt)

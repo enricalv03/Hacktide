@@ -1,0 +1,6 @@
+# Opcional: modelo XGB pooled (forecast_por_tipo.py, /products/xgb-forecast)
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+xgboost>=2.0
+scikit-learn>=1.3

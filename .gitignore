@@ -1,0 +1,126 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# .gitignore — INTERHACK / panel comercial INIBSA
+#
+# Lo que NO se sube al repo: artefactos regenerables (venv, node_modules,
+# build outputs, base SQLite, modelos entrenados), datasets pesados de origen,
+# logs, secretos y basura del sistema operativo / editor.
+#
+# Lo que SÍ se mantiene: el código fuente del backend (`backend/*.py`),
+# del frontend (`frontend/src/**`, `package.json`, `package-lock.json`,
+# `vite.config.js`, `index.html`) y el pipeline de datos (`db/*.py`, `db/*.sql`).
+# Los CSV de entrada pequeños en `db/raw/` también se mantienen para que
+# `db/create_database.py` funcione tras clonar (excepto el Master, ver abajo).
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# Entornos virtuales (los recrea scripts/run_all.sh)
+venv/
+.venv/
+env/
+ENV/
+.python-version
+
+# ── Node / frontend ─────────────────────────────────────────────────────────
+node_modules/
+**/node_modules/
+.npm/
+.pnp/
+.pnp.js
+.yarn/
+
+# Build outputs y caches de Vite
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+.vite/
+
+# Logs de package managers
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── Backend: artefactos regenerables del pipeline ML ────────────────────────
+# `backend/pipeline.py` y `backend/forecast_por_tipo.py` regeneran estos
+# binarios cuando se ejecuta `scripts/run_weekly_pipeline.sh`.
+backend/modelos_xgb/
+backend/xgb_output_forecast/
+
+# ── Base de datos SQLite (se regenera con db/create_database.py) ────────────
+db/interhack.db
+db/interhack.db-shm
+db/interhack.db-wal
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ── Outputs del pipeline de datos (regenerables) ────────────────────────────
+# Estos se vuelven a generar con `bash scripts/run_weekly_pipeline.sh`.
+db/reports/
+db/models/
+
+# Outputs del pipeline ML por cliente (db/load_model_outputs.py los carga
+# de vuelta a SQLite). Se regeneran con backend/pipeline.py.
+db/dataset/clientes_clasificados.csv
+db/dataset/productos_riesgo_cliente.csv
+db/dataset/forecast_clientes.csv
+db/dataset/forecast_productos_global.csv
+
+# ── Datasets grandes (no comitear binarios pesados) ─────────────────────────
+# El Master pesa ~23 MB; se distribuye por separado y va dentro de db/raw/.
+db/raw/Master_Datos_Unificado.csv
+db/dataset/Master_Datos_Unificado.csv
+
+# ── Logs del proyecto ───────────────────────────────────────────────────────
+.run_all_logs/
+*.log
+
+# ── Secretos / config local ─────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# ── IDE / editor ────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*~
+.history/
+.cursor/
+
+# ── Sistema operativo ───────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Plotly / Jupyter (por si se generan offline) ────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py

@@ -1,0 +1,24 @@
+# Base SQLite regenerable
+interhack.db
+interhack.db-shm
+interhack.db-wal
+
+# Caches Python
+__pycache__/
+
+# Artefactos del pipeline semanal (regenerables)
+reports/
+models/
+
+# Outputs del pipeline ML por cliente (db/load_model_outputs.py los carga a SQLite)
+dataset/clientes_clasificados.csv
+dataset/productos_riesgo_cliente.csv
+dataset/forecast_clientes.csv
+dataset/forecast_productos_global.csv
+
+# CSV pesado de ventas (Master) — añadirlo manualmente, no comitear el binario
+raw/Master_Datos_Unificado.csv
+dataset/Master_Datos_Unificado.csv
+
+# Sistema
+.DS_Store
