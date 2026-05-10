@@ -1,0 +1,26 @@
+﻿Id. Producto,Categoria_H,Familia_H,Bloque analítico,months_count,avg_monthly_units,median_monthly_units,p25_units,p75_units,min_monthly_units,max_monthly_units,total_units,fluctuation_percent,normal_low_units,normal_high_units,down_percent,up_percent,stability
+5119,Categoria T1,Familia T2,Productos Técnicos,57,9.93,9.0,7.0,12.0,2,26,566,55.56,7.0,12.0,-22.22,33.33,不稳定
+5102,Categoria T1,Familia T2,Productos Técnicos,60,21.85,22.0,14.0,28.0,5,44,1311,63.64,14.0,28.0,-36.36,27.27,不稳定
+5100,Categoria T1,Familia T1,Productos Técnicos,60,45.33,40.5,29.75,56.75,14,132,2720,66.67,29.75,56.75,-26.54,40.12,不稳定
+5105,Categoria T1,Familia T1,Productos Técnicos,47,15.74,15.0,9.0,20.0,0,40,740,73.33,9.0,20.0,-40.0,33.33,不稳定
+5118,Categoria T1,Familia T2,Productos Técnicos,60,16.02,16.5,8.75,21.0,-1,39,961,74.24,8.75,21.0,-46.97,27.27,不稳定
+178,Categoria C1,Familia C1,Commodities,59,23.27,21.0,14.5,31.0,3,64,1373,78.57,14.5,31.0,-30.95,47.62,不稳定
+5099,Categoria T1,Familia T1,Productos Técnicos,60,574.0,568.0,490.0,653.25,288,882,34440,28.74,490.0,653.25,-13.73,15.01,中等波动
+4565,Categoria C1,Familia C1,Commodities,60,526.02,514.5,423.0,586.5,273,892,31561,31.78,423.0,586.5,-17.78,13.99,中等波动
+4566,Categoria C1,Familia C1,Commodities,60,1129.47,1073.5,915.75,1259.25,642,1765,67768,32.0,915.75,1259.25,-14.69,17.3,中等波动
+4912,Categoria C2,Familia C2,Commodities,60,1187.58,1188.0,986.25,1380.75,531,1711,71255,33.21,986.25,1380.75,-16.98,16.22,中等波动
+4567,Categoria C1,Familia C1,Commodities,60,132.07,135.5,109.0,154.25,40,233,7924,33.39,109.0,154.25,-19.56,13.84,中等波动
+5115,Categoria T1,Familia T2,Productos Técnicos,60,179.05,182.0,149.25,210.25,67,265,10743,33.52,149.25,210.25,-17.99,15.52,中等波动
+5107,Categoria T1,Familia T1,Productos Técnicos,60,48.3,46.0,38.75,55.5,25,92,2898,36.41,38.75,55.5,-15.76,20.65,中等波动
+5103,Categoria T1,Familia T1,Productos Técnicos,60,96.27,97.0,78.5,115.25,29,166,5776,37.89,78.5,115.25,-19.07,18.81,中等波动
+5108,Categoria T1,Familia T1,Productos Técnicos,60,92.27,91.0,71.75,108.75,40,174,5536,40.66,71.75,108.75,-21.15,19.51,中等波动
+4911,Categoria C2,Familia C2,Commodities,60,348.97,345.5,263.25,417.75,160,845,20938,44.72,263.25,417.75,-23.81,20.91,中等波动
+5104,Categoria T1,Familia T1,Productos Técnicos,16,2.88,2.5,1.0,4.0,1,7,46,120.0,1.0,4.0,-60.0,60.0,低销量产品，参考价值低
+5116,Categoria T1,Familia T2,Productos Técnicos,60,17.62,16.0,10.75,24.0,5,42,1057,82.81,10.75,24.0,-32.81,50.0,极不稳定
+3399,Categoria C1,Familia C1,Commodities,60,14.08,12.0,8.0,19.25,2,34,845,93.75,8.0,19.25,-33.33,60.42,极不稳定
+5112,Categoria T1,Familia T2,Productos Técnicos,58,13.98,13.5,6.0,19.75,1,45,811,101.85,6.0,19.75,-55.56,46.3,极不稳定
+5106,Categoria T1,Familia T1,Productos Técnicos,48,10.38,9.0,5.0,14.25,1,28,498,102.78,5.0,14.25,-44.44,58.33,极不稳定
+5382,Categoria T1,Familia T1,Productos Técnicos,27,13.56,11.0,5.0,20.5,1,47,366,140.91,5.0,20.5,-54.55,86.36,极不稳定
+5117,Categoria T1,Familia T2,Productos Técnicos,47,7.64,3.0,2.0,7.5,1,43,359,183.33,2.0,7.5,-33.33,150.0,极不稳定
+5381,Categoria T1,Familia T1,Productos Técnicos,24,6.21,3.5,2.75,9.25,1,16,149,185.71,2.75,9.25,-21.43,164.29,极不稳定
+3408,Categoria C1,Familia C1,Commodities,60,790.63,795.0,697.0,884.25,389,1198,47438,23.55,697.0,884.25,-12.33,11.23,稳定
