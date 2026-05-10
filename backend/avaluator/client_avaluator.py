@@ -1,12 +1,13 @@
+import os
 import pandas as pd
 import numpy as np
 
 
 def build_customer_weight_model(
-    ventas,
-    productos,
     client_id,
     product_id,
+    ventas=None,
+    productos=None,
     date_col="Fecha",
     client_col="Id. Cliente",
     product_col="Id. Producto",
@@ -29,6 +30,13 @@ def build_customer_weight_model(
         low_weights: 未来12个月偏低权重
         normal_weights: 未来12个月正常购买权重
     """
+
+    if ventas is None or productos is None:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        if ventas is None:
+            ventas = pd.read_csv(os.path.join(base_dir, "Ventas.csv"))
+        if productos is None:
+            productos = pd.read_csv(os.path.join(base_dir, "Productos.csv"))
 
     ventas = ventas.copy()
     productos = productos.copy()
@@ -381,12 +389,7 @@ def build_customer_weight_model(
 
 
 
-ventas = pd.read_csv("Ventas.csv")
-productos = pd.read_csv("Productos.csv")
-
 serious_low, low, normal = build_customer_weight_model(
-    ventas=ventas,
-    productos=productos,
     client_id=123,
     product_id=4565
 )
